@@ -83,10 +83,9 @@ public class Main {
     }
 
     private static int generarNumeroNoRepetido(Set<Integer> numerosSalidos) {
-        Random random = new Random();
         int numero;
         do {
-            numero = random.nextInt(MAX_NUMB) + 1;
+            numero = (int) (Math.random() * MAX_NUMB) + 1;
         } while (numerosSalidos.contains(numero));
 
         numerosSalidos.add(numero);
